@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blobbo's Adventure</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe4f0;
+            background-image: url('https://image.noelshack.com/fichiers/2024/49/5/1733482995-img-7762.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Loading Text */
+        .loading-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Loading Bar Container */
+        .loading-bar-container {
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        /* Loading Bar */
+        .loading-bar {
+            height: 20px;
+            width: 0%;
+            background: linear-gradient(90deg, #4CAF50, #81C784);
+            border-radius: 20px;
+            transition: width 4s ease-in-out;
+        }
+
+        /* Blobbo Image */
+        .blobbo-image {
+            position: absolute;
+            bottom: 150px;
+            right: 50px;
+            width: 150px;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Speech Bubble */
+        .bubble {
+            position: absolute;
+            bottom: 100px;
+            right: 50px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            font-size: 1rem;
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid #4CAF50;
+            max-width: 200px;
+        }
+
+        .bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blobbo-image {
+                bottom: 120px;
+                right: 20px;
+                width: 120px;
+            }
+
+            .bubble {
+                bottom: 70px;
+                right: 20px;
+                max-width: 160px;
+                font-size: 0.9rem;
+            }
+
+            .loading-bar-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Text -->
+    <div class="loading-text">Loading...</div>
+
+    <!-- Loading Bar -->
+    <div class="loading-bar-container">
+        <div class="loading-bar" id="loadingBar"></div>
+    </div>
+
+    <!-- Blobbo Floating Image -->
+    <img src="https://image.noelshack.com/fichiers/2024/49/6/1733557155-img-7698.png" alt="Floating Blobbo" class="blobbo-image">
+
+    <!-- Speech Bubble -->
+    <div class="bubble">#BlobbosAdventure ♥️!</div>
+
+    <!-- JavaScript -->
+    <script>
+        // Animating the loading bar and redirecting to the homepage
+        window.onload = function() {
+            const loadingBar = document.getElementById('loadingBar');
+            loadingBar.style.width = '100%';
+
+            setTimeout(() => {
+                window.location.href = 'homepage.html';
+            }, 4000); // Redirect after 4 seconds
+        };
+    </script>
+</body>
+</html>

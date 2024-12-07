@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Blobbo's Adventure</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe4f0;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 20px;
+        }
+
+        .nav-buttons a {
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background-color: #ff7c99;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #ff5e7a;
+            transform: translateY(-5px);
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .contact-section h1 {
+            font-size: 3rem;
+            color: #333;
+        }
+
+        .contact-section p {
+            font-size: 1.2rem;
+            color: #555;
+            margin: 10px 0 30px;
+        }
+
+        .contact-box {
+            margin: 0 auto 40px auto;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .contact-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff7c99;
+        }
+
+        .contact-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-box ul li {
+            font-size: 1rem;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .form-box {
+            margin: 0 auto;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        form button {
+            background-color: #ff7c99;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #ff5e7a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://image.noelshack.com/fichiers/2024/49/6/1733560736-85762c7c-3392-4e61-9746-675490797267.jpeg" alt="Blobbo Header">
+        <div class="nav-buttons">
+            <a href="homepage.html">Homepage</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <div class="contact-section">
+        <h1>Contact Us</h1>
+        <p>Have questions, ideas, or feedback? We'd love to hear from you!</p>
+
+        <div class="contact-box">
+            <h2>Why Contact Us?</h2>
+            <ul>
+                <li>🤝 Partnership Opportunities</li>
+                <li>🚨 Reporting Bugs</li>
+                <li>💡 Sharing Game Ideas</li>
+            </ul>
+        </div>
+
+        <div class="form-box">
+            <form action="mailto:blobbosadventure@outlook.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">💬 Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
